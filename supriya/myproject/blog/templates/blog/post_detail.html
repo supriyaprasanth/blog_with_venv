@@ -1,0 +1,32 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div class="post">
+        {% if user.is_authenticated %}
+     		<a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-edit"></a>
+     		<a class="btn btn-default" href="{% url 'post_remove' pk=post.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
+		{% endif %}
+        {% if post.created_date %}
+            <div class="date">
+                {{ post.created_date }}
+            </div>
+        {% endif %}
+        <div class="heading"><h1>{{ post.title }}</h1></div>
+        <p>{{ post.text|linebreaksbr }}</p>
+        
+    </div>
+
+    <hr>
+    
+    <a class="btn btn-default" href="{% url 'add_comment_to_post' pk=post.pk %}"><span class="glyphicon glyphicon-comment"></a>
+    
+	{% for comment in post.comments.all %}
+	    <div class="comment">
+	        <div class="date">{{ comment.created_date }}</div>
+	        <strong>{{ comment.author }}</strong>
+	        <p>{{ comment.text}}</p>
+	    </div>
+		{% empty %}
+		    <p>No comments</p>
+	{% endfor %}
+{% endblock %}

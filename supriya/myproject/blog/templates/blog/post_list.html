@@ -1,0 +1,23 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    {% for post in posts %}
+        <div class="post">
+            <div class="date">
+                {{ post.created_date }}
+            </div>
+            <div>
+                <h3><b>Posted by: {{ post.author }}</b></h3>
+            </div>
+            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+            
+            
+            
+            <a class="btn btn-default" href="{% url 'like' post.id %}"><span class="glyphicon glyphicon-thumbs-up"></a>
+                <div class="like">like :{{ post.likes }}</div>
+            <br>
+            <a href="{% url 'post_detail' pk=post.pk %}"> Comments: {{ post.comments.count }}</a> <br><hr><br>
+        </div>
+    {% endfor %}
+{% endblock content %}

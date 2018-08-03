@@ -1,0 +1,107 @@
+h1 a {
+    color: #00b300;
+}
+
+body {
+    padding-left: 15px;
+}
+
+h1 a {
+    color: #66ff66;
+    font-family: 'Helvetica';
+}
+
+
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #005c99;
+    font-size: 35pt;
+    font-family: 'Aclonica';
+    text-decoration: none;
+}
+
+
+.content {
+    margin-left: 40px;
+}
+
+h1, h2, h3, h4 {
+    font-weight: bold;
+    font-family: 'Helvetica';
+}
+
+
+
+.post-form textarea, .post-form input {
+    width: 100%;
+}
+
+.top-post, .top-post:hover, .top-post:visited {
+    color: #007399;
+    float: right;
+    font-size: 20pt;
+    margin-right: 18px;
+    font-family: 'Pacifico', cursive;
+}
+
+.top-search, .top-search:hover, .top-search:visited {
+    color: #007399;
+    float: right;
+    font-size: 20pt;
+    margin-right: 18px;
+
+}
+
+.top-logout, .top-logout:hover, .top-logout:visited {
+    color: #007399;
+    float: right;
+    font-size: 20pt;
+    margin-right: 18px;
+}
+
+.top-login, .top-login:hover, .top-login:visited {
+    color: #007399;
+    float: right;
+    font-size: 20pt;
+    margin-right: 18px;
+}
+
+.top-signup, .top-signup:hover, .top-signup:visited {
+    color: #007399;
+    float: right;
+    font-size: 20pt;
+    margin-right: 18px;
+}
+
+
+
+
+.top-menu1, .top-menu1:hover, .top-menu1:visited {
+    color: #006bb3;
+    float: left;
+    font-size: 22pt;
+    font-family: 'Pacifico', cursive;
+}
+
+
+
+
+.comment {
+    margin: 10px 0px 10px 10px;
+    color: #404040;
+}
+
+
+.date {
+    color: #3399ff;
+}
+
+.heading {
+    color: #80ff80;
+
+
+}
+
+.like {
+   color: #3399ff 
+}
